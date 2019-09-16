@@ -43,7 +43,7 @@ app.use(function(req,res,next){
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/", indexRoutes);
-
-app.listen(8081, function(){
-    console.log("Server Started on 8081!");
+const PORT = process.env.PORT || 8081;
+app.listen(PORT, function(){
+    console.log("Server Started on ${ PORT }!");
 });
