@@ -14,7 +14,7 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
     
-mongoose.connect("mongodb://localhost/sam_camp_v7_7");
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/sam_camp_v7_7");
 
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
