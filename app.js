@@ -41,7 +41,7 @@ app.use(function(req,res,next){
     next();
 })
 
-//seedDB();
+seedDB();
 
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
