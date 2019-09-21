@@ -15,9 +15,6 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
     
 mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/sam_camp_v7_7");
-//mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/sam_camp_v7_7', { useNewUrlParser: true })
-  //      .then(connect => console.log('connected to mongodb..'))
-    //    .catch(e => console.log('could not connect to mongodb', e))
 
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -41,7 +38,7 @@ app.use(function(req,res,next){
     next();
 })
 
-seedDB();
+//seedDB();
 
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
