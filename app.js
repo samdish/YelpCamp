@@ -45,5 +45,5 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/", indexRoutes);
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, function(){
-    console.log("Server Started on ${ PORT }!");
+    console.log("Server Started on " + PORT + "!");
 });
